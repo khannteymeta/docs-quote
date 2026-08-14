@@ -20,11 +20,11 @@ export default function Newsletter() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="flex-1 px-4 py-3 rounded-xl border border-[#cbd5cb] bg-[#faf8f5] text-zinc-800 text-sm focus:outline-none focus:border-[#6b7a6b]"
+        className="flex-1 px-4 py-3 rounded-full border border-[rgba(0,31,92,0.2)] bg-white text-[#001f5c] text-sm focus:outline-none focus:border-[#001f5c]"
       />
       <button
         type="submit"
-        className="px-6 py-3 bg-[#6b7a6b] hover:bg-[#5a6b5a] text-white font-semibold rounded-xl text-sm transition-all cursor-pointer"
+        className="px-8 py-3 bg-[#001f5c] hover:bg-[#FFCC00] text-[#FFCC00] hover:text-[#001f5c] font-bold rounded-full text-sm transition-all shadow-[0_4px_15px_rgba(0,31,92,0.2)] hover:-translate-y-0.5 cursor-pointer"
       >
         Sign Up
       </button>

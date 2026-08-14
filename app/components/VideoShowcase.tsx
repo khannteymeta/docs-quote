@@ -15,7 +15,7 @@ const BookBackground = dynamic(
 
 export default function VideoShowcase() {
   return (
-    <div className="relative mx-auto max-w-4xl rounded-3xl overflow-hidden border border-[#e2dacb] bg-[#faf8f5] shadow-[0_10px_35px_rgba(107,122,107,0.08)] p-2.5">
+    <div className="relative mx-auto max-w-4xl rounded-3xl overflow-hidden border border-[rgba(0,31,92,0.15)] bg-white shadow-[0_10px_35px_rgba(0,31,92,0.08)] p-2.5">
       <div className="aspect-video w-full rounded-2xl overflow-hidden relative">
         <Player
           component={BookBackground}
@@ -32,9 +32,9 @@ export default function VideoShowcase() {
           }}
         />
         {/* Play/Pause decoration overlay */}
-        <div className="absolute bottom-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#faf8f5]/90 text-xs font-semibold text-[#5a6b5a] border border-[#e2dacb] backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-[#6b7a6b] animate-ping" />
-          <span>Ambient Study Space</span>
+        <div className="absolute bottom-4 left-4 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#001f5c]/90 text-xs font-bold text-[#FFCC00] border border-[rgba(255,204,0,0.3)] backdrop-blur-sm">
+          <span className="w-2 h-2 rounded-full bg-[#FFCC00] animate-ping" />
+          <span>Live Ambient Showcase</span>
         </div>
       </div>
     </div>

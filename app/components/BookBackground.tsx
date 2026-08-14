@@ -10,7 +10,7 @@ interface Particle {
   speedY: number;
   speedX: number;
   opacity: number;
-  colorType: "sage" | "sand" | "cream";
+  colorType: "navy" | "gold";
 }
 
 export function BookBackground() {
@@ -29,7 +29,7 @@ export function BookBackground() {
         speedY: Math.random() * 0.04 + 0.015,
         speedX: Math.random() * 0.03 - 0.015,
         opacity: Math.random() * 0.5 + 0.2,
-        colorType: rand > 0.6 ? "sage" : rand > 0.3 ? "sand" : "cream",
+        colorType: rand > 0.5 ? "gold" : "navy",
       });
     }
     return list;
@@ -40,7 +40,7 @@ export function BookBackground() {
       style={{
         width: "100%",
         height: "100%",
-        background: "radial-gradient(circle at 50% 50%, #f7f5f0 0%, #ebe6dc 100%)",
+        background: "radial-gradient(circle at 50% 50%, #f7f9fc 0%, #ebf0f7 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -54,7 +54,7 @@ export function BookBackground() {
           width: "500px",
           height: "500px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(139,150,139,0.12) 0%, rgba(0,0,0,0) 70%)",
+          background: "radial-gradient(circle, rgba(0,31,92,0.08) 0%, rgba(0,0,0,0) 70%)",
           transform: `translate(${Math.sin(frame * 0.012) * 40}px, ${Math.cos(frame * 0.008) * 20}px)`,
           filter: "blur(30px)",
         }}
@@ -67,7 +67,7 @@ export function BookBackground() {
           width: "600px",
           height: "600px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(217,192,163,0.15) 0%, rgba(0,0,0,0) 70%)",
+          background: "radial-gradient(circle, rgba(255,204,0,0.12) 0%, rgba(0,0,0,0) 70%)",
           transform: `translate(${Math.cos(frame * 0.008) * 50}px, ${Math.sin(frame * 0.01) * 30}px)`,
           filter: "blur(40px)",
         }}
@@ -80,13 +80,7 @@ export function BookBackground() {
         const currentX = (p.x + frame * p.speedX) % 100;
         const finalX = currentX < 0 ? currentX + 100 : currentX;
 
-        // Choose cozy colors
-        let color = "rgba(247, 245, 240, 0.8)"; // cream
-        if (p.colorType === "sage") {
-          color = "rgba(107, 122, 107, 0.6)"; // sage
-        } else if (p.colorType === "sand") {
-          color = "rgba(201, 168, 131, 0.6)"; // sand
-        }
+        let color = p.colorType === "gold" ? "rgba(255, 204, 0, 0.8)" : "rgba(0, 31, 92, 0.5)";
 
         return (
           <div
@@ -105,14 +99,14 @@ export function BookBackground() {
         );
       })}
 
-      {/* Subtle organic sketch-like grid lines */}
+      {/* Subtle organic grid lines */}
       <svg
         style={{
           position: "absolute",
           width: "100%",
           height: "100%",
-          opacity: 0.06,
-          stroke: "#6b7a6b",
+          opacity: 0.05,
+          stroke: "#001f5c",
         }}
       >
         <defs>
