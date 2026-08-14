@@ -115,22 +115,26 @@ export default function Home() {
 
         {/* Featured Quote Block */}
         <section className="mb-24 max-w-4xl mx-auto">
-          <div className="relative p-8 md:p-12 rounded-3xl bg-[#001f5c] border border-[rgba(255,255,255,0.1)] text-white shadow-xl overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 text-8xl text-white/10 font-serif pointer-events-none select-none">
-              “
-            </div>
-            <div className="relative z-10">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#FFCC00] mb-4 block">
-                Featured Insight
-              </span>
-              <p className="text-xl md:text-2xl font-medium italic text-white mb-6 leading-relaxed">
-                &ldquo;You do not rise to the level of your goals. You fall to the level of your systems.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-0.5 bg-[#FFCC00] rounded-full" />
-                <span className="text-sm font-semibold text-zinc-300">
-                  James Clear, <span className="text-white font-medium">Atomic Habits</span>
+          <div className="relative group">
+            <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-3xl bg-[#FFCC00] transition-transform group-hover:translate-x-3 group-hover:translate-y-3" />
+            <div className="relative p-8 md:p-12 pl-10 md:pl-14 rounded-3xl bg-[#001f5c] border-2 border-[#001f5c] text-white shadow-xl overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-3 bg-[#FFCC00]" />
+              <div className="absolute top-0 right-0 p-8 text-8xl text-white/10 font-serif pointer-events-none select-none">
+                “
+              </div>
+              <div className="relative z-10">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#FFCC00] mb-4 block">
+                  Featured Insight
                 </span>
+                <p className="text-xl md:text-2xl font-medium italic text-white mb-6 leading-relaxed">
+                  &ldquo;You do not rise to the level of your goals. You fall to the level of your systems.&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-0.5 bg-[#FFCC00] rounded-full" />
+                  <span className="text-sm font-semibold text-zinc-300">
+                    James Clear, <span className="text-white font-medium">Atomic Habits</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -144,66 +148,75 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Book Card 1 */}
-            <div className="p-8 rounded-2xl bg-white border border-[rgba(0,31,92,0.1)] hover:border-[#001f5c] transition-all flex flex-col justify-between group shadow-sm hover:shadow-md">
-              <div>
-                <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
-                  Self-Improvement
-                </span>
-                <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
-                  Atomic Habits
-                </h3>
-                <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  Learn how tiny, daily 1% improvements accumulate into massive personal transformations over time.
-                </p>
+            <div className="relative group">
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#001f5c] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
+              <div className="relative p-8 rounded-2xl bg-white border-2 border-[#001f5c] flex flex-col justify-between h-full">
+                <div>
+                  <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
+                    Self-Improvement
+                  </span>
+                  <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
+                    Atomic Habits
+                  </h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    Learn how tiny, daily 1% improvements accumulate into massive personal transformations over time.
+                  </p>
+                </div>
+                <Link
+                  href="/docs/atomic-habits"
+                  className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
+                >
+                  Read Summary &rarr;
+                </Link>
               </div>
-              <Link
-                href="/docs/atomic-habits"
-                className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
-              >
-                Read Summary &rarr;
-              </Link>
             </div>
 
             {/* Book Card 2 */}
-            <div className="p-8 rounded-2xl bg-white border border-[rgba(0,31,92,0.1)] hover:border-[#001f5c] transition-all flex flex-col justify-between group shadow-sm hover:shadow-md">
-              <div>
-                <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
-                  Wisdom
-                </span>
-                <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
-                  Experience & Quotes
-                </h3>
-                <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  A compiled list of hand-written highlights, deep reflections, and insights from various books I have read.
-                </p>
+            <div className="relative group">
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#FFCC00] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
+              <div className="relative p-8 rounded-2xl bg-white border-2 border-[#001f5c] flex flex-col justify-between h-full">
+                <div>
+                  <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
+                    Wisdom
+                  </span>
+                  <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
+                    Experience & Quotes
+                  </h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    A compiled list of hand-written highlights, deep reflections, and insights from various books I have read.
+                  </p>
+                </div>
+                <Link
+                  href="/docs/quotes"
+                  className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
+                >
+                  Explore Quotes &rarr;
+                </Link>
               </div>
-              <Link
-                href="/docs/quotes"
-                className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
-              >
-                Explore Quotes &rarr;
-              </Link>
             </div>
 
             {/* Book Card 3 */}
-            <div className="p-8 rounded-2xl bg-white border border-[rgba(0,31,92,0.1)] hover:border-[#001f5c] transition-all flex flex-col justify-between group shadow-sm hover:shadow-md">
-              <div>
-                <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
-                  How-To Guide
-                </span>
-                <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
-                  Reading Framework
-                </h3>
-                <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  How to actively read, annotate, highlight, and successfully implement book teachings into your daily life.
-                </p>
+            <div className="relative group">
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#001f5c] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
+              <div className="relative p-8 rounded-2xl bg-white border-2 border-[#001f5c] flex flex-col justify-between h-full">
+                <div>
+                  <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
+                    How-To Guide
+                  </span>
+                  <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
+                    Reading Framework
+                  </h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    How to actively read, annotate, highlight, and successfully implement book teachings into your daily life.
+                  </p>
+                </div>
+                <Link
+                  href="/docs/guide"
+                  className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
+                >
+                  Learn More &rarr;
+                </Link>
               </div>
-              <Link
-                href="/docs/guide"
-                className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
-              >
-                Learn More &rarr;
-              </Link>
             </div>
           </div>
         </section>
