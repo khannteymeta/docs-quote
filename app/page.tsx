@@ -53,10 +53,8 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl mx-auto text-[#001f5c]">
-            Grow your mind,
-            <span className="block mt-2 text-[#001f5c]">
-              one <span className="underline decoration-[#FFCC00] decoration-wavy decoration-2">distilled book</span> at a time.
-            </span>
+            Grow your mind
+          
           </h1>
 
           <p className="max-w-2xl mx-auto text-base md:text-lg text-zinc-600 mb-10 leading-relaxed">
@@ -68,7 +66,7 @@ export default function Home() {
               href="/docs"
               className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#001f5c] text-[#FFCC00] font-bold hover:bg-[#FFCC00] hover:text-[#001f5c] transition-all shadow-[0_4px_15px_rgba(0,31,92,0.2)] hover:-translate-y-0.5 text-center"
             >
-              Start Reading Insights
+              Start Reading
             </Link>
             <Link
               href="/docs/quotes"
@@ -87,12 +85,19 @@ export default function Home() {
         {/* Creator Bio Section */}
         <section className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-t border-[rgba(0,31,92,0.1)] pt-16">
           <div className="relative">
-            <div className="aspect-square max-w-md mx-auto rounded-3xl overflow-hidden bg-[#001f5c] border border-[rgba(0,31,92,0.2)] relative shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#FFCC00]/25 to-transparent pointer-events-none" />
+            <div className="aspect-square max-w-md mx-auto rounded-3xl overflow-hidden bg-[#001f5c] border border-[rgba(0,31,92,0.2)] relative shadow-2xl group">
+              <Image
+                src="/passionate.png"
+                alt="A Passionate Reader"
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#001f5c]/85 via-[#001f5c]/25 to-transparent pointer-events-none" />
               <div className="absolute inset-8 flex flex-col justify-end text-white z-10">
-                <span className="text-xs uppercase tracking-widest text-[#FFCC00] font-bold mb-1">Curator</span>
+                <span className="text-xs uppercase tracking-widest text-[#FFCC00] font-bold mb-1"></span>
                 <h3 className="text-2xl font-extrabold mb-1">A Passionate Reader</h3>
-                <p className="text-xs text-zinc-300">Distilling knowledge, sharing experiences.</p>
+                <p className="text-xs text-zinc-200">Distilling knowledge, sharing experiences.</p>
               </div>
             </div>
           </div>
@@ -112,10 +117,10 @@ export default function Home() {
             </p>
             <div>
               <Link
-                href="/docs/guide"
+                href="/docs"
                 className="inline-flex items-center gap-2 text-sm font-bold text-[#001f5c] hover:text-[#FFCC00] transition-colors"
               >
-                Read my active reading guide &rarr;
+                Explore the library &rarr;
               </Link>
             </div>
           </div>
@@ -126,7 +131,7 @@ export default function Home() {
           <div className="relative group">
             <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-3xl bg-[#FFCC00] transition-transform group-hover:translate-x-3 group-hover:translate-y-3" />
             <div className="relative p-8 md:p-12 pl-10 md:pl-14 rounded-3xl bg-[#001f5c] border-2 border-[#001f5c] text-white shadow-xl overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-3 bg-[#FFCC00]" />
+              <div className="absolute left-0 top-0 bottom-0 w-3" />
               <div className="absolute top-0 right-0 p-8 text-8xl text-white/10 font-serif pointer-events-none select-none">
                 “
               </div>
@@ -154,7 +159,7 @@ export default function Home() {
             Explore the Book Shelves
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Book Card 1 */}
             <div className="relative group">
               <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#001f5c] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
@@ -179,9 +184,33 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Book Card 2 */}
+            {/* Book Card 2 - Rich Dad Poor Dad */}
             <div className="relative group">
               <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#FFCC00] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
+              <div className="relative p-8 rounded-2xl bg-white border-2 border-[#001f5c] flex flex-col justify-between h-full">
+                <div>
+                  <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
+                    Finance & Mindset
+                  </span>
+                  <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
+                    Rich Dad Poor Dad
+                  </h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                    Master financial literacy, understand assets vs liabilities, and make money work for you.
+                  </p>
+                </div>
+                <Link
+                  href="/docs/rich-dad-poor-dad"
+                  className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
+                >
+                  Read Summary &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* Book Card 3 */}
+            <div className="relative group">
+              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#001f5c] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
               <div className="relative p-8 rounded-2xl bg-white border-2 border-[#001f5c] flex flex-col justify-between h-full">
                 <div>
                   <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
@@ -199,30 +228,6 @@ export default function Home() {
                   className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
                 >
                   Explore Quotes &rarr;
-                </Link>
-              </div>
-            </div>
-
-            {/* Book Card 3 */}
-            <div className="relative group">
-              <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-[#001f5c] transition-transform group-hover:translate-x-2.5 group-hover:translate-y-2.5" />
-              <div className="relative p-8 rounded-2xl bg-white border-2 border-[#001f5c] flex flex-col justify-between h-full">
-                <div>
-                  <span className="text-xs text-[#001f5c] font-bold uppercase tracking-widest mb-3 block">
-                    How-To Guide
-                  </span>
-                  <h3 className="text-xl font-bold mb-3 text-[#001f5c] group-hover:text-[#FFCC00] transition-colors">
-                    Reading Framework
-                  </h3>
-                  <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                    How to actively read, annotate, highlight, and successfully implement book teachings into your daily life.
-                  </p>
-                </div>
-                <Link
-                  href="/docs/guide"
-                  className="text-sm font-bold text-[#001f5c] group-hover:text-[#FFCC00] inline-flex items-center gap-1 transition-colors"
-                >
-                  Learn More &rarr;
                 </Link>
               </div>
             </div>
