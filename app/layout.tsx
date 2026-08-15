@@ -22,11 +22,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased light`}
+      style={{ colorScheme: 'light' }}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider theme={{ defaultTheme: 'light', enabled: false }}>{children}</RootProvider>
       </body>
     </html>
   );

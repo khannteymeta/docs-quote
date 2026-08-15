@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { FullSearchTrigger } from "fumadocs-ui/layouts/shared/slots/search-trigger";
 import LandingBackground from "./components/LandingBackground";
 import VideoShowcase from "./components/VideoShowcase";
 import Newsletter from "./components/Newsletter";
@@ -15,12 +17,18 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-[rgba(0,31,92,0.1)] bg-white/90 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-extrabold tracking-tight text-[#001f5c]">
-              LIBRIS<span className="text-[#FFCC00]">.insights</span>
-            </span>
-          </div>
-          <nav className="flex items-center gap-8">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Dq Logo"
+              width={140}
+              height={140}
+              className="h-12 md:h-14 w-auto object-contain hover:scale-105 transition-transform"
+              priority
+            />
+          </Link>
+          <nav className="flex items-center gap-4 md:gap-8">
+            <FullSearchTrigger className="w-36 md:w-56 border-[rgba(0,31,92,0.15)] bg-zinc-50/80 hover:bg-zinc-100/90 text-[#001f5c]" />
             <Link
               href="/docs"
               className="text-sm font-bold text-[#001f5c] hover:text-[#FFCC00] transition-colors"
